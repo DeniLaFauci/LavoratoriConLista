@@ -7,24 +7,34 @@ using System.Threading.Tasks;
 namespace ProgettoLavoratori2
 {
     [Serializable]
-    public class Lavoratori
+    public class Persone
     {
+        public Guid Persone_ID { get; set; }
         public string Nome { get; set; }
         public string Cognome { get; set; }
         public char Genere { get; set; }
         public int StipendioMensile { get; set; }
         public DateTime DataDiNascita { get; set; }
 
-        public Lavoratori() 
+        public Persone() 
         {
+            Persone_ID = Guid.NewGuid();
         }
 
-        public Lavoratori(string nome, string cognome, char genere, int stipendioMensile, DateTime dataDiNascita) 
+        public Persone(string nome, string cognome, char genere, int stipendioMensile, DateTime dataDiNascita) 
         {
             Nome = nome;
             Cognome = cognome;
             Genere = genere;
             StipendioMensile = stipendioMensile;
+            DataDiNascita = dataDiNascita;
+            Persone_ID = Guid.NewGuid();
+        }
+
+        public Persone(string nome, string cognome, DateTime dataDiNascita)
+        {
+            Nome = nome;
+            Cognome = cognome;
             DataDiNascita = dataDiNascita;
         }
 

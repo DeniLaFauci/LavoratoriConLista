@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProgettoLavoratori2
 {
-    public class Insert : Lavoratori
+    public class Insert : Persone
     {
         public static int Numero()
         {
